@@ -1,0 +1,61 @@
+import random
+
+one ='''
+-----
+|   |
+| o |
+|   |
+-----
+'''
+two = '''
+-----
+|o  |
+|   |
+|  o|
+-----
+'''
+three = '''
+-----
+|o  |
+| o |
+|  o|
+-----
+'''
+four = '''
+-----
+|o o|
+|   |
+|o o|
+-----
+'''
+five = '''
+-----
+|o o|
+| o |
+|o o|
+-----
+'''
+six = '''
+-----
+|o o|
+|o o|
+|o o|
+-----
+'''
+
+Dice_image = [one, two, three, four, five, six]
+
+user_choice = input("Do you want to roll the dice? Yes or No: ")
+decision = user_choice.lower()
+
+if (decision) == "yes":
+  random_roll = random.randint(0,5)
+  plus_one = random_roll + 1
+  print(f"You Rolled {plus_one}!")
+  print(Dice_image[random_roll])
+  if (plus_one) == 6:
+    print("Congratulations! you rolled 6!")
+  elif (plus_one) == 1:
+    print("Better luck next time!")
+else:
+  print("Thank you, come again")
